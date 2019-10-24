@@ -1,0 +1,25 @@
+<app-add-result (addResult)="addResult($event)"></app-add-result>
+  <table class="pure-table pure-table-bordered">
+    <thead>
+      <tr>
+        <th>Match Date</th>
+        <th>Home Team</th>
+        <th>Result</th>
+        <th>Away Team</th>
+        <th>Result</th>
+        <th>Score Code</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let result of results">
+            <td>{{ result.matchDate.toDateString() }}</td>
+            <td>{{ result.homeTeam }}</td>
+            <td>{{ result.homeResult }}</td>
+            <td>{{ result.awayTeam }}</td>
+            <td>{{ result.awayResult }}</td>
+            <td>{{ result.scoreCode }}</td>
+            <td><button (click)="deleteResult(result)" class="del">x</button></td>
+        </tr>
+    </tbody>
+  </table>
+ <app-match-form [teamName]="teamName" [homeForm]="homeForm" [awayForm]="awayForm" [totalForm]="totalForm" ></app-match-form>

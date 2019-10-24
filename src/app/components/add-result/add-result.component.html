@@ -1,0 +1,47 @@
+<div class="container">
+    <form class="form"  (ngSubmit)="onSubmit()">
+        <div class="row">
+          <div class="col-25">
+            <label for="matchDate">Match Date</label>
+          </div>
+          <div class="col-75">
+            <input type="date" name="matchDate" [(ngModel)]="matchDate" placeholder="Enter match date...">
+          </div>
+          </div>
+        <div class="row">
+          <div class="col-25">
+            <label for="homeTeam">Home Team</label>
+          </div>
+          <div class="col-75">
+            <input type="text" name="homeTeam" [(ngModel)]="homeTeam" placeholder="Enter home team...">
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-25">
+            <label for="homeResult">Home Result</label>
+          </div>
+          <div class="col-75">
+            <input type="number" name="homeResult" [(ngModel)]="homeResult" placeholder="Enter home result...">
+          </div>
+        </div>
+        <div class="row">
+            <div class="col-25">
+              <label for="awayTeam">Away Team</label>
+            </div>
+            <div class="col-75">
+              <input type="text" name="awayTeam" [(ngModel)]="awayTeam" placeholder="Enter away team...">
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-25">
+              <label for="awayResult">Away Result</label>
+            </div>
+            <div class="col-75">
+              <input type="number" name="awayResult" [(ngModel)]="awayResult" placeholder="Enter away result...">
+            </div>
+          </div>
+        <div class="row">
+              <input type="submit" value="Submit" class="btn">
+        </div>
+    </form>
+    </div>
